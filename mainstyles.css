@@ -1,0 +1,183 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Layout is column-wise */
+    justify-content: space-between; /* Ensures the footer stays at the bottom */
+    background-image: url('bgmain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Project title styling */
+.project-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 10;  /* Ensures the title stays above other content */
+    display: flex;
+    align-items: center;
+}
+
+.project-title .logo {
+    width: 30px;  /* Adjust logo size */
+    height: 30px;
+    margin-right: 10px;  /* Space between the logo and text */
+}
+
+/* Container styling - this keeps the "Start Quiz" button centered */
+.container {
+    flex: 1; /* Take all available space above the footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the button and welcome text */
+    align-items: center; /* Horizontally center */
+    text-align: center;
+    gap: 20px; /* Space between welcome message and the start button */
+}
+
+/* Welcome message styles */
+.welcome-message h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+/* Buttons container styling - positioned at the top right of the screen */
+.buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;  /* Ensures buttons are placed in a row */
+    gap: 10px;  /* Adds space between buttons */
+}
+
+/* Contact button styling */
+.contact-btn {
+    padding: 10px 20px;
+    background-color: #ff5733;  /* Different color for Contact button */
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #c03d21; /* Darker shade on hover */
+}
+
+/* Login and Register button styles */
+.buttons a {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #0056b3;
+}
+
+/* Start quiz button styling */
+.start-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #98D8EF; /* Changed color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #7db9d7; /* Slightly darker shade for hover effect */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .start-btn {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+
+    .buttons a {
+        font-size: 14px;
+        padding: 8px 16px;
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        top: auto;
+        right: auto;
+        position: static;
+        align-items: center; /* Center the buttons on smaller screens */
+    }
+
+    body {
+        background-attachment: scroll; /* Disables fixed background on smaller screens */
+    }
+
+    /* Make sure the title stays properly visible on smaller screens */
+    .project-title {
+        font-size: 24px;
+    }
+
+    /* Adjust logo size for smaller screens */
+    .project-title .logo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .welcome-message h1 {
+        font-size: 24px;  /* Adjust welcome message font size for smaller screens */
+    }
+
+    .welcome-message p {
+        font-size: 16px;
+    }
+}
